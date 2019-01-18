@@ -14,7 +14,7 @@ server.use(restify.plugins.acceptParser(server.acceptable));
 
 routes(server);
 
-server.listen(3000);
+server.listen(process.env['PORT'] || 3000);
 
 // export for testing
 module.exports = server;
